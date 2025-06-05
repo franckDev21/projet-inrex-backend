@@ -14,7 +14,7 @@ export default function Dashboard() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Utilisateurs" />
             <div className="flex h-full flex-1 flex-col gap-4 rounded-xl p-4">
-                Hello, this is the user management page. You can manage users here.
+                Hello - UPDATE, this is the user management page. You can manage users here.
             </div>
         </AppLayout>
     );
