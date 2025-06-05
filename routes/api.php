@@ -8,16 +8,6 @@ use App\Http\Controllers\Api\Auth\ResetPasswordCustomerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
 
 // Customer Authentication Routes
 Route::post('/customer/register', [RegisterCustomerController::class, 'store'])->name('customer.register');
@@ -33,7 +23,3 @@ Route::middleware('auth:customers')->group(function () { // Use 'customers' guar
     })->name('customer.profile');
 });
 
-// Default Sanctum user route (can be kept or removed if not used for 'users' model)
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
