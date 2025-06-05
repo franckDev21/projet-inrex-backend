@@ -40,7 +40,7 @@ class LoginCustomerController extends Controller
         $token = $customer->createToken('api-token')->plainTextToken; // Removed 'role:customer' ability
 
         return response()->json([
-            'message' => 'Customer logged in successfully.',
+            'message' => 'Customer logged in successfully - test.',
             'customer' => $customer->only(['id', 'name', 'email']),
             'token' => $token,
         ]);
